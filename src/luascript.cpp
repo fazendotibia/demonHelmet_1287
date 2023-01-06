@@ -1388,6 +1388,9 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(CONST_ME_BLUE_FIREWORKS)
 	registerEnum(CONST_ME_CHIVALRIOUS_CHALLENGE)
 	registerEnum(CONST_ME_DIVINE_DAZZLE)
+        registerEnum(CONST_ME_FATAL)
+	registerEnum(CONST_ME_DODGE)
+	registerEnum(CONST_ME_HOURGLASS)
 
 	registerEnum(CONST_ANI_NONE)
 	registerEnum(CONST_ANI_SPEAR)
@@ -2991,6 +2994,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("ItemType", "getRequiredLevel", LuaScriptInterface::luaItemTypeGetRequiredLevel);
 	registerMethod("ItemType", "getAmmoType", LuaScriptInterface::luaItemTypeGetAmmoType);
 	registerMethod("ItemType", "getCorpseType", LuaScriptInterface::luaItemTypeGetCorpseType);
+        registerMethod("ItemType", "getClassLevel", LuaScriptInterface::luaItemTypeGetClassLevel);
 
 	registerMethod("ItemType", "getDecayTime", LuaScriptInterface::luaItemTypeGetDecayTime);
 	registerMethod("ItemType", "getShowDuration", LuaScriptInterface::luaItemTypeGetShowDuration);
@@ -14115,6 +14119,19 @@ int LuaScriptInterface::luaItemTypeGetAmmoType(lua_State* L)
 	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
 	if (itemType) {
 		lua_pushnumber(L, itemType->ammoType);
+	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+
+int LuaScriptInterface::luaItemTypeGetClassLevel(lua_State* L)
+{
+	// itemType:getClassLevel()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType) {
+		lua_pushnumber(L, itemType->classLevel);
 	} else {
 		lua_pushnil(L);
 	}

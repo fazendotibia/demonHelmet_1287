@@ -1332,6 +1332,7 @@ class LuaScriptInterface
 		static int luaItemTypeGetRequiredLevel(lua_State* L);
 		static int luaItemTypeGetAmmoType(lua_State* L);
 		static int luaItemTypeGetCorpseType(lua_State* L);
+                static int luaItemTypeGetClassLevel(lua_State* L);
 
 		static int luaItemTypeGetSpeed(lua_State* L);
 		static int luaItemTypeGetBaseSpeed(lua_State* L);

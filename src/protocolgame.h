@@ -330,6 +330,8 @@ private:
 	void sendPendingStateEntered();
 	void sendEnterWorld();
 
+        void sendItemClasses();
+
 	void sendFightModes();
 
 	void sendCreatureLight(const Creature *creature);
@@ -342,7 +344,7 @@ private:
 	void sendSpellCooldown(uint8_t spellId, uint32_t time);
 	void sendSpellGroupCooldown(SpellGroup_t groupId, uint32_t time);
 
-	void sendCoinBalance();
+        void sendCoinBalance();
 
 	void sendOpenStore(uint8_t serviceType);
 	void sendStoreCategoryOffers(StoreCategory *category);
@@ -461,6 +463,8 @@ private:
 
 	bool loggedIn = false;
 	bool shouldAddExivaRestrictions = false;
+
+        bool oldProtocol = false;	
 
 	void sendInventory();
 

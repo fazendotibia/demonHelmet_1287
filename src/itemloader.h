@@ -108,6 +108,9 @@ enum clientVersion_t {
 	CLIENT_VERSION_1100_V3 = 60, // No relased
 	CLIENT_VERSION_1100_V4 = 61, // No relased
 	CLIENT_VERSION_1140 = 62,
+	CLIENT_VERSION_1272 = 63,
+	CLIENT_VERSION_1281 = 64,
+	CLIENT_VERSION_1285 = 65,
 };
 
 enum rootattrib_ {
@@ -149,6 +152,7 @@ enum itemattrib_t {
 	ITEM_ATTR_WRITEABLE3, //deprecated
 
 	ITEM_ATTR_WAREID,
+	ITEM_ATTR_CLASSLEVEL,
 
 	ITEM_ATTR_LAST
 };
