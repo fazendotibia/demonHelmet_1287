@@ -113,7 +113,7 @@ enum MarketAction_t {
 enum MarketRequest_t {
         MARKETREQUEST_OWN_HISTORY = 1,
 	MARKETREQUEST_OWN_OFFERS = 2,
-	MARKETREQUEST_ITEM = 3,
+	MARKETREQUEST_ITEM_BROWSE = 3,
 };
 
 enum MarketOfferState_t {

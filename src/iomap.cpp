@@ -104,10 +104,10 @@ bool IOMap::loadMap(Map* map, const std::string& fileName)
 		return false;
 	}
 
-	if (root_header.majorVersionItems > Item::items.majorVersion) {
-		setLastErrorString("The map was saved with a different items.otb version, an upgraded items.otb is required.");
-		return false;
-	}
+	// if (root_header.majorVersionItems > Item::items.majorVersion) {
+		// setLastErrorString("The map was saved with a different items.otb version, an upgraded items.otb is required.");
+		// return false;
+	// }
 
 	if (root_header.minorVersionItems < CLIENT_VERSION_810) {
 		setLastErrorString("This map needs to be updated.");

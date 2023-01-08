@@ -955,6 +955,9 @@ class Item : virtual public Thing
 		bool isHangable() const {
 			return items[id].isHangable;
 		}
+		bool isUpgradeClassification() const {
+			return items[id].upgradeClassification;
+		}
 		bool isRotatable() const {
 			return items[id].rotatable && items[id].rotateTo;
 		}

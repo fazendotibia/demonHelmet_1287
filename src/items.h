@@ -280,6 +280,7 @@ class ItemType
 		FluidTypes_t fluidSource = FLUID_NONE;
 
 		uint8_t floorChange = 0;
+                uint8_t upgradeClassification = 0;
 		uint8_t alwaysOnTopOrder = 0;
 		uint8_t lightLevel = 0;
 		uint8_t lightColor = 0;
